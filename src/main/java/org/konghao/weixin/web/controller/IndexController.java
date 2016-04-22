@@ -1,0 +1,15 @@
+package org.konghao.weixin.web.controller;
+
+import org.konghao.weixin.web.BeanFactoryContext;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class IndexController {
+	
+	@RequestMapping(value={"/index","/"})
+	public String index() {
+		System.out.println(BeanFactoryContext.getAccessToken());
+		return "index/index";
+	}
+}
